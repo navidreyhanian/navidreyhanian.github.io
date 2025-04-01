@@ -4,4 +4,4 @@ title: Resume
 permalink: /resume/
 ---
 
-[My resume is here.](https://navidreyhanian.com/files/Resume_Reyhanian_wr.pdf)
+[My resume is here]({{ site.baseurl }}/files/Resume_Reyhanian_wr.pdf)
