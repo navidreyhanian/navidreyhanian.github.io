@@ -2,12 +2,12 @@
 main:
   - title: "Publications"
     url: /publications/
-    
-  - title: "Resume"
-    url: /resume/
 
   - title: Projects
     url: /projects/
 
   - title: Patents
     url: /patents/
+
+  - title: "Resume"
+    url: /resume/
