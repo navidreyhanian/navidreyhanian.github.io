@@ -37,7 +37,10 @@ We compare the performance of our TDD-assisted WMMSE method against the classica
 
 ## Precoding for Uplink RIS-Assisted Cell-Free Massive MIMO-OFDM Systems with Hardware Impairments {#precoding-for-uplink-ris-assisted-cell-free-massive-mimo-ofdm-systems-with-hardware-impairments}
 
-<img src="{{ site.baseurl }}/assets/img/Fixed_vs_Optimized.jpg" alt="Figure 3: Comparison of Optimization Schemes." style="display: block; margin: 0 auto 20px auto; max-width:450px;">
+<figure style="display: block; margin: 0 auto 20px auto; max-width:450px;">
+  <img src="{{ site.baseurl }}/assets/img/Fixed_vs_Optimized.jpg" alt="Figure 3: Comparison of Optimization Schemes.">
+  <figcaption>Figure 3: Comparison of Optimization Schemes.</figcaption>
+</figure>
 
 In this work, we investigate the maximization of the uplink sum-rate in fully centralized CF-mMIMO-OFDM networks by proposing a novel joint optimization framework. Our approach simultaneously optimizes user precoding, multi-RIS coefficients, and combining at APs while accounting for IQ imbalance (IQI) impairments at both UEs and APs. The non-convex precoding problem is tackled via a block coordinate descent (BCD) algorithm based on the weighted minimum mean square error (WMMSE) method, where subproblems for UE precoders and AP combiners are efficiently solved using bisection-search and closed-form solutions. Moreover, we introduce several reformulations of the multi-RIS coefficient subproblem, which are globally solved using a cost-effective gradient projection method (GPM) with adaptive step-size. The convergence of these methods is theoretically supported, and extensive numerical tests demonstrate that our approach outperforms heuristic methods that decouple the problems and ignore hardware impairments.
 
