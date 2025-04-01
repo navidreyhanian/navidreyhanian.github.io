@@ -1,13 +1,17 @@
-# main links links
+# main links
 main:
   - title: "Publications"
     url: /publications/
+    nav_order: 1
 
   - title: Projects
     url: /projects/
+    nav_order: 2
 
   - title: Patents
     url: /patents/
+    nav_order: 3
 
   - title: "Resume"
     url: /resume/
+    nav_order: 4
