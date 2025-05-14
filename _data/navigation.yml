@@ -16,6 +16,3 @@ main:
     url: /resume/
     nav_order: 4
 
-  - title: "Patents"
-    url: /patents/
-
