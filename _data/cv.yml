@@ -1,0 +1,148 @@
+cv:
+  name: Navid Reyhanian
+  label: Wireless Systems Architect, Ph.D.
+  email: navid.reyhanian@gmail.com
+  website: https://navidreyhanian.github.io
+  summary: >
+    Signal processing expert specializing in digital/analog precoding and optimization for next-generation wireless systems.
+    Designed algorithms for multi-user MIMO-OFDM, satellite-terrestrial, and RIS-assisted architectures, and developed localization
+    solutions using GNSS, Wi-Fi FTM, BLE, UWB, and AoA/PDoA. Hands-on in debugging code and systems to solve real-world problems.
+
+  sections:
+    Experience:
+      - company: Cisco Systems, Inc., Enterprise Networking Product Group
+        position: Wireless Systems Architect
+        location: Milpitas, CA
+        start_date: 2022-06
+        summary: Advanced development of signal processing algorithms for wireless networks. Code developed and maintained in C/C++ and Python.
+        highlights:
+          - Designed and developed a GNSS receiver combining a Kalman filter with raw pseudorange measurements and Gauss-Newton optimization for more accurate, robust positioning.
+          - Created algorithms for real-time localization of access points that jointly process Wi-Fi Fine Time Measurement (FTM) data and GNSS signals.
+          - Developed an Angle of Arrival (AoA) estimation framework from Phase Difference of Arrival (PDoA) measurements on AP antennas, with phase unwrapping, memory, and ambiguity resolution.
+          - Analyzed RF impairments of transmit front-end modules, including filtering, tuning, and adaptive power control, to meet FTM ranging accuracy requirements.
+          - Designed clustering algorithms for AP grouping and a UWB client positioning engine for downlink TDoA networks.
+          - Led the design and development of an uplink TDoA tag positioning system.
+          - Developed block coordinate descent algorithms for large-scale, rank-constrained anchor-free optimization, improving AP localization in GPS-denied environments.
+          - Hands-on performance testing of Wi-Fi, BLE, and UWB devices, plus debugging and performance tuning of C/C++ and Python code with tight latency requirements.
+
+      - company: Sabre Corporation
+        position: Operations Research Analyst (Intern)
+        location: Southlake, TX
+        start_date: 2019-05
+        end_date: 2019-08
+        summary: Distributed, scalable large-scale optimization algorithms for airline scheduling.
+        highlights:
+          - ADMM with warm start, with linearized subproblems solved by away-steps Frank-Wolfe.
+
+    Education:
+      - institution: University of Minnesota, Twin Cities
+        location: Minnesota, USA
+        area: Electrical Engineering
+        studyType: Ph.D.
+        start_date: 2016
+        end_date: 2022
+        highlights:
+          - "Dissertation: New Large-Scale Optimization Methods with Applications in Communication Networks and Medical Imaging"
+          - "Advisor: Prof. Zhi-Quan Luo"
+          - "GPA: 3.96/4"
+
+      - institution: University of Minnesota, Twin Cities
+        location: Minnesota, USA
+        area: Electrical Engineering
+        studyType: M.Sc.
+        start_date: 2016
+        end_date: 2019
+        highlights:
+          - "GPA: 3.96/4"
+
+      - institution: Technical University of Munich (TUM)
+        location: Munich, Germany
+        area: Visiting Researcher for Master's Thesis
+        start_date: 2014
+        end_date: 2015
+
+      - institution: University of Tehran
+        location: Tehran, Iran
+        area: Electrical Engineering
+        studyType: M.Sc.
+        start_date: 2012
+        end_date: 2015
+        highlights:
+          - "Advisors: Prof. Behrouz Maham and Prof. Vahid Shah-Mansouri"
+
+      - institution: Iran University of Science & Technology (IUST)
+        location: Tehran, Iran
+        area: Electrical Engineering, Communications
+        studyType: B.Sc.
+        start_date: 2008
+        end_date: 2012
+
+    Skills:
+      - name: Signal processing & communications
+        keywords:
+          - MIMO-OFDM
+          - hybrid beamforming
+          - precoding and combining
+          - RF impairment modeling (IQ imbalance, PAPR/clipping, out-of-band emissions)
+          - GNSS, Wi-Fi FTM, AoA/PDoA, UWB TDoA positioning
+          - Kalman filtering
+      - name: Optimization
+        keywords:
+          - convex and non-convex optimization
+          - WMMSE
+          - block coordinate descent
+          - ADMM
+          - Riemannian manifold methods
+          - first-order methods
+      - name: Programming
+        keywords:
+          - Python (NumPy, SciPy, scikit-learn, TensorFlow)
+          - C/C++
+          - MATLAB
+          - Simulink
+          - CVX
+          - Gurobi
+          - CUDA
+          - OpenMPI
+          - multi-threading
+          - LaTeX
+      - name: Lab
+        keywords:
+          - fixed-point arithmetic
+          - oscilloscopes
+          - spectrum analyzers
+          - function generators
+          - OrCAD schematic capture and PCB layout
+
+    Patents:
+      - bullet: "Seven patent families with Cisco Technology, Inc., including granted U.S. Patent 12,615,076 B2 and six published U.S. patent applications. See [patents](/publications/#patents)."
+
+    Honors and Awards:
+      - title: Cisco "Wireless Star"
+        awarder: Cisco Systems
+      - title: Department Fellowship
+        awarder: University of Minnesota
+        date: 2016
+      - title: Honorary admission for Master's degree studies
+        awarder: Iran University of Technology
+        date: 2012
+      - title: Ranked 81st nationwide in the M.Sc. entrance exam in electrical engineering
+        date: 2012
+
+    Professional Service:
+      - bullet: Session Chair, IEEE SPAWC 2020 and IEEE Asilomar 2020
+      - bullet: Reviewer for IEEE Transactions on Communications, IEEE Transactions on Vehicular Technology, IEEE ICC, and IEEE ISIT
+
+    Certificates:
+      - name: Neural Networks and Deep Learning
+        issuer: Coursera
+      - name: "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization"
+        issuer: Coursera
+      - name: Structuring Machine Learning Projects
+        issuer: Coursera
+      - name: Convolutional Neural Networks
+        issuer: Coursera
+      - name: Sequence Models
+        issuer: Coursera
+      - name: Natural Language Processing in TensorFlow
+        issuer: Coursera
