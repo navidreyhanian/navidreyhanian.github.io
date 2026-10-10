@@ -1,0 +1,149 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Joint Spatial and Spectral Hybrid Precoding for Multi-User MIMO-OFDM Systems | Navid Reyhanian </title> <meta name="author" content="Navid Reyhanian"> <meta name="description" content="Hybrid precoding that meets OFDM spectral-emission masks and clipping limits by design and tolerates phase-shifter errors. mmWave MU-MIMO-OFDM, 28 GHz."> <meta name="keywords" content="wireless communications, signal processing, MIMO-OFDM, physical layer, modem, precoding, beamforming, RF impairments, localization"> <meta property="og:site_name" content="Navid Reyhanian"> <meta property="og:type" content="website"> <meta property="og:title" content="Navid Reyhanian | Joint Spatial and Spectral Hybrid Precoding for Multi-User MIMO-OFDM Systems"> <meta property="og:url" content="https://navidreyhanian.github.io/projects/1_hybrid_precoding_mimo_ofdm/"> <meta property="og:description" content="Hybrid precoding that meets OFDM spectral-emission masks and clipping limits by design and tolerates phase-shifter errors. mmWave MU-MIMO-OFDM, 28 GHz."> <meta property="og:image" content="https://navidreyhanian.github.io/assets/img/prof_pic.jpg"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Joint Spatial and Spectral Hybrid Precoding for Multi-User MIMO-OFDM Systems"> <meta name="twitter:description" content="Hybrid precoding that meets OFDM spectral-emission masks and clipping limits by design and tolerates phase-shifter errors. mmWave MU-MIMO-OFDM, 28 GHz."> <meta name="twitter:image" content="https://navidreyhanian.github.io/assets/img/prof_pic.jpg"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Navid Reyhanian"
+        },
+        "url": "https://navidreyhanian.github.io/projects/1_hybrid_precoding_mimo_ofdm/",
+        "@type": "WebSite",
+        "description": "Hybrid precoding that meets OFDM spectral-emission masks and clipping limits by design and tolerates phase-shifter errors. mmWave MU-MIMO-OFDM, 28 GHz.",
+        "headline": "Joint Spatial and Spectral Hybrid Precoding for Multi-User MIMO-OFDM Systems",
+        
+        "sameAs": ["https://www.linkedin.com/in/navid-reyhanian-9a246456","https://scholar.google.com/citations?user=Gk4nFPEAAAAJ","https://dblp.org/pid/153/1946.html",null],
+        
+        "name": "Navid Reyhanian",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%93%A1&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://navidreyhanian.github.io/projects/1_hybrid_precoding_mimo_ofdm/"> <script src="/assets/js/theme.js?v=34bc06259a3186b0d53e4bd6c89b0f7a"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Navid</span> Reyhanian </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Joint Spatial and Spectral Hybrid Precoding for Multi-User MIMO-OFDM Systems</h1> <p class="post-description">Hybrid precoding that meets OFDM spectral-emission masks and clipping limits by design and tolerates phase-shifter errors. mmWave MU-MIMO-OFDM, 28 GHz.</p> </header> <article> <p><strong>Paper:</strong> N. Reyhanian, R. Ghaderi Zefreh, P. Ramezani, and E. Björnson, “Joint Spatial and Spectral Hybrid Precoding for Multi-User MIMO-OFDM Systems,” <a href="https://arxiv.org/abs/2509.07229v3" rel="external nofollow noopener" target="_blank">arXiv:2509.07229</a> (<a href="https://arxiv.org/pdf/2509.07229v3" rel="external nofollow noopener" target="_blank">PDF</a>). Part of this work was presented at IEEE ICC 2026, Glasgow, UK.</p> <div class="row text-center mt-4 mb-1"> <div class="col-6 col-md-3 mb-3"> <div class="card p-3 h-100"> <div style="font-size: 1.7rem; font-weight: 700; color: var(--global-theme-color);">+14.5%</div> <div style="font-size: 0.85rem;">sum-rate over the RF design of Wang et al. (16 RF chains, 25 dBm)</div> </div> </div> <div class="col-6 col-md-3 mb-3"> <div class="card p-3 h-100"> <div style="font-size: 1.7rem; font-weight: 700; color: var(--global-theme-color);">up to +20%</div> <div style="font-size: 0.85rem;">sum-rate over classical hybrid MMSE, and at least +9.5% at every power from 5 to 25 dBm</div> </div> </div> <div class="col-6 col-md-3 mb-3"> <div class="card p-3 h-100"> <div style="font-size: 1.7rem; font-weight: 700; color: var(--global-theme-color);">up to +48%</div> <div style="font-size: 0.85rem;">over non-robust hybrid MMSE with 30° phase-shifter errors</div> </div> </div> <div class="col-6 col-md-3 mb-3"> <div class="card p-3 h-100"> <div style="font-size: 1.7rem; font-weight: 700; color: var(--global-theme-color);">−48.9 dBm</div> <div style="font-size: 0.85rem;">out-of-band emissions under a −60 dBm/100 kHz emission mask</div> </div> </div> </div> <p style="font-size: 0.8rem; text-align: center; opacity: 0.8;">Gains computed from the plotted data in the paper's figures. Setup: 28 GHz, 20 MHz, 64 subcarriers, 32-antenna BS, 4 users × 4 antennas; 8 RF chains unless noted.</p> <h3 id="why-it-matters-for-modem-and-rf-system-design">Why it matters for modem and RF system design</h3> <ul> <li> <strong>Emission compliance is part of the design, not a check afterward.</strong> Wireless standards limit out-of-band emissions through the ACLR and the spectral emission mask. Here the mask is a constraint inside the precoder optimization, applied block-averaged in the same way 3GPP NR defines ACLR and PSD compliance.</li> <li> <strong>Peak control for DACs and PAs.</strong> OFDM peaks put strict requirements on DACs and power amplifiers and cause distortion and spectral regrowth. A per-antenna clipping limit is enforced on the oversampled, CP-inclusive waveform.</li> <li> <strong>Hardware-efficient and impairment-aware.</strong> A partially-connected hybrid array uses one RF chain per subarray. The phase-shifter updates are robust to random phase errors.</li> <li> <strong>Low complexity.</strong> Every sub-step is closed-form or a bisection search inside a scalable ADMM. Convergence and per-iteration complexity are analyzed.</li> </ul> <h3 id="system-architecture">System architecture</h3> <div class="row justify-content-sm-center"> <div class="col-12 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/hybrid_precoding/architecture-480.webp 480w,/assets/img/projects/hybrid_precoding/architecture-800.webp 800w,/assets/img/projects/hybrid_precoding/architecture-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/hybrid_precoding/architecture.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Partially-connected MU-MIMO-OFDM architecture" data-zoomable="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> <b>End-to-end partially-connected MU-MIMO-OFDM chain.</b> The AP applies a per-subcarrier digital precoder, then IFFT + CP, a DAC, and an RF chain feeding one phase shifter per antenna in its subarray. Each user applies phase-shifter RF combining, an ADC, CP removal + FFT, and a per-subcarrier digital combiner. The design variables are the digital and RF precoders and combiners, under power, clipping, and emission-mask limits and with phase-shifter errors. </div> <div class="row mt-3" style="font-size: 0.9rem;"> <div class="col-md-4 mb-2"> <b>Notation</b><br> $\mathbf{H}_k^s$: channel to user $k$ on subcarrier $s$<br> $\mathbf{V}_{\mathrm{RF}}, \mathbf{V}_k^s$: RF / digital precoders<br> $\mathbf{U}_{\mathrm{RF},k}, \mathbf{U}_k^s$: RF / digital combiners </div> <div class="col-md-4 mb-2"> <b>Key property (partial connection)</b><br> $\mathbf{V}_{\mathrm{RF}}^H\mathbf{V}_{\mathrm{RF}} = \tfrac{N_t}{N_{\mathrm{RF}}}\mathbf{I}_{N_{\mathrm{RF}}}$<br> so the power constraint simplifies </div> <div class="col-md-4 mb-2"> <b>Design variables</b><br> $\mathbf{V}_k^s$ (digital, power-limited), $\mathbf{V}_{\mathrm{RF}}$ (RF, $|\cdot|=1$)<br> $\mathbf{U}_k^s$ (digital, unconstrained), $\mathbf{U}_{\mathrm{RF},k}$ (RF, $|\cdot|=1$) </div> </div> <h3 id="approach">Approach</h3> <p>The problem is to maximize the downlink sum-rate over all subcarriers. It is nonconvex in every variable. We developed a <strong>WMMSE-based block coordinate descent (BCD)</strong> algorithm that updates the blocks in Gauss-Seidel order:</p> <ul> <li> <strong>Digital combiners and MSE weights:</strong> closed-form updates.</li> <li> <strong>Digital precoder:</strong> with block-level precoding (precoders fixed over a scheduling block), the subproblem has a convex objective and three convex constraints: power, spectral mask, and clipping. A <strong>three-block ADMM</strong> splits it into smaller problems, each solved in closed form or by bisection.</li> <li> <strong>RF precoder and RF combiners:</strong> <strong>coordinate descent</strong> with a <strong>closed-form update per phase shifter</strong>. A <strong>robust variant</strong> maximizes the expected sum-rate under random phase errors \(\Delta\theta \sim \mathcal{N}(0, \sigma_e^2)\).</li> <li> <strong>Guarantees:</strong> the inner solvers are theoretically supported, and the BCD gives a <strong>monotonically convergent</strong> regularized WMMSE objective under exact inner solves.</li> </ul> <h3 id="results">Results</h3> <div class="row justify-content-sm-center"> <div class="col-12 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/hybrid_precoding/psd_vs_mask-480.webp 480w,/assets/img/projects/hybrid_precoding/psd_vs_mask-800.webp 800w,/assets/img/projects/hybrid_precoding/psd_vs_mask-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/hybrid_precoding/psd_vs_mask.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Expected PSD under different emission masks" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> <b>Spectrum shaped to the mask.</b> The expected PSD of the transmitted 20 MHz OFDM symbol stays under every enforced emission mask (red, dashed) from −60 to −20 dBm/100 kHz. The precoder trades in-band power and occupied width for compliance automatically. </div> <div class="row"> <div class="col-md-6 mt-3"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/hybrid_precoding/emission_and_rate-480.webp 480w,/assets/img/projects/hybrid_precoding/emission_and_rate-800.webp 800w,/assets/img/projects/hybrid_precoding/emission_and_rate-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/hybrid_precoding/emission_and_rate.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="In-band power, OOB power, and sum-rate versus mask level" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption"> <b>A tunable rate–emissions trade-off.</b> Going from a −60 to a −50 dBm/100 kHz mask raises OOB emissions from −48.9 to −39.1 dBm and the sum-rate from 8.69 to 15.54 bit/s/Hz (P<sup>s</sup> = 25 dBm, N<sub>RF</sub> = 16). </div> </div> <div class="col-md-6 mt-3"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/hybrid_precoding/rate_vs_power-480.webp 480w,/assets/img/projects/hybrid_precoding/rate_vs_power-800.webp 800w,/assets/img/projects/hybrid_precoding/rate_vs_power-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/hybrid_precoding/rate_vs_power.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Sum-rate versus transmit power" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption"> <b>When the mask, not power, is the bottleneck.</b> Under a −20 dBm/100 kHz mask the rate keeps scaling with power and RF chains, reaching about 60 bit/s/Hz with 32 RF chains at 25 dBm. Under −40 dBm/100 kHz it saturates beyond about 15 dBm as the mask constraints become active. </div> </div> </div> <div class="row"> <div class="col-md-6 mt-3"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/hybrid_precoding/rf_benchmarks-480.webp 480w,/assets/img/projects/hybrid_precoding/rf_benchmarks-800.webp 800w,/assets/img/projects/hybrid_precoding/rf_benchmarks-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/hybrid_precoding/rf_benchmarks.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Proposed RF design versus benchmarks" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption"> <b>Beats published RF designs.</b> At 25 dBm, the closed-form phase-shifter updates deliver +10.5% (8 RF chains) and +14.5% (16 RF chains) more sum-rate than Wang et al.'s coordinate descent. They gain up to +6.2% over Riemannian conjugate gradient (RCG; 16 RF chains, 20 dBm) and +30–66% over random phases across all powers. </div> </div> <div class="col-md-6 mt-3"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/hybrid_precoding/robust_ps_errors-480.webp 480w,/assets/img/projects/hybrid_precoding/robust_ps_errors-800.webp 800w,/assets/img/projects/hybrid_precoding/robust_ps_errors-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/hybrid_precoding/robust_ps_errors.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Robust versus non-robust designs under phase-shifter errors" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption"> <b>Built for imperfect hardware.</b> With ideal phase shifters, the proposed design beats classical hybrid MMSE by 9.5–20%. With 30° phase-shifter errors, the robust update rules add 23–38% over the non-robust WMMSE design and 40–48% over non-robust hybrid MMSE (N<sub>RF</sub> = 8). </div> </div> </div> <div class="row"> <div class="col-md-6 mt-3"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/hybrid_precoding/convergence-480.webp 480w,/assets/img/projects/hybrid_precoding/convergence-800.webp 800w,/assets/img/projects/hybrid_precoding/convergence-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/hybrid_precoding/convergence.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Convergence of the proposed BCD approach" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption"> <b>Fast, monotone convergence.</b> The sum-rate rises with every BCD iteration, and most of the gain arrives in the first ~10 iterations (25 dBm per subcarrier, 64 subcarriers). </div> </div> <div class="col-md-6 mt-3"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/hybrid_precoding/wmmse_vs_power-480.webp 480w,/assets/img/projects/hybrid_precoding/wmmse_vs_power-800.webp 800w,/assets/img/projects/hybrid_precoding/wmmse_vs_power-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/hybrid_precoding/wmmse_vs_power.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="WMMSE objective versus transmit power" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <div class="caption"> <b>The objective tracks the rate.</b> The WMMSE cost keeps falling with power under the −20 dBm/100 kHz mask and levels off once the −40 dBm/100 kHz mask binds, mirroring the sum-rate. </div> </div> </div> <h3 id="simulation-testbed">Simulation testbed</h3> <p>Implemented in <strong>Python</strong> with an <strong>object-oriented</strong> design, using:</p> <ul> <li> <strong>Numerical computing:</strong> NumPy and SciPy on optimized BLAS/LAPACK</li> <li> <strong>Channel modeling:</strong> NVIDIA Sionna on TensorFlow</li> <li> <strong>Parallelization:</strong> multiprocessing (process pools across all CPU cores) and concurrent.futures</li> <li> <strong>Plotting:</strong> Matplotlib</li> </ul> <p><strong>Size:</strong> about 23,300 lines of Python across 44 modules, of which about 14,300 are code.</p> <h3 id="simulation-parameters">Simulation parameters</h3> <ul> <li> <strong>Arrays and users:</strong> 32-antenna BS; 4 users with 4 antennas and 2 RF chains each, sharing all subcarriers. Half-wavelength ULAs.</li> <li> <strong>Band:</strong> 28 GHz carrier, 20 MHz bandwidth, 64 subcarriers.</li> <li> <strong>Geometry and channel:</strong> users within a 4 m radius, 400 m from the BS. Frequency-selective Rician channel (\(\kappa\) = 10 dB) with 3GPP path loss and shadowing.</li> <li> <strong>Noise:</strong> −174 dBm/Hz with an 8 dB noise figure.</li> <li> <strong>Constraints:</strong> clipping limit \(\chi = 0.7\). Clipping and mask constraints are met with at least 90% probability, and the mask is enforced from 10.01 to 20 MHz on each side of the band.</li> </ul> <p><em>All results and figures are from arXiv:2509.07229v3. The architecture diagram is adapted from the authors’ slides.</em></p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Navid Reyhanian. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projects",
+          title: "projects",
+          description: "Selected work on MIMO-OFDM transceiver design, hardware impairments, and wireless positioning.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "Journal articles, conference papers, preprints, and patents, newest first.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "The PDF icon on the right downloads my full resume.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "news-our-paper-mask-compliant-clipping-aware-precoding-for-multi-user-mimo-ofdm-systems-has-been-accepted-at-ieee-globecom-2026-symposium-on-signal-processing-for-communications",
+          title: 'Our paper Mask-Compliant Clipping-Aware Precoding for Multi-User MIMO-OFDM Systems has been accepted at...',
+          description: "",
+          section: "News",},{id: "projects-joint-spatial-and-spectral-hybrid-precoding-for-multi-user-mimo-ofdm-systems",
+          title: 'Joint Spatial and Spectral Hybrid Precoding for Multi-User MIMO-OFDM Systems',
+          description: "Hybrid precoding that meets OFDM spectral-emission masks and clipping limits by design and tolerates phase-shifter errors. mmWave MU-MIMO-OFDM, 28 GHz.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_hybrid_precoding_mimo_ofdm/";
+            },},{id: "projects-symbol-level-mask-compliant-hybrid-precoding-for-multi-user-mimo-ofdm-systems",
+          title: 'Symbol-Level Mask-Compliant Hybrid Precoding for Multi-User MIMO-OFDM Systems',
+          description: "Hybrid precoding that guarantees spectral-mask and clipping compliance for every transmitted OFDM symbol and tolerates phase-shifter errors. mmWave MU-MIMO-OFDM, 28 GHz.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_symbol_level_hybrid_precoding/";
+            },},{id: "projects-precoding-for-uplink-ris-assisted-cell-free-mimo-ofdm-systems-with-iq-imbalance",
+          title: 'Precoding for Uplink RIS-Assisted Cell-Free MIMO-OFDM Systems with IQ Imbalance',
+          description: "Joint UE precoding, multi-RIS configuration, and BS combining that account for transmit and receive IQ imbalance and the image-subcarrier leakage it causes in OFDM. 28 GHz.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_ris_cell_free_iq_imbalance/";
+            },},{id: "projects-wireless-positioning-at-cisco",
+          title: 'Wireless Positioning at Cisco',
+          description: "GNSS, Wi-Fi FTM, AoA/PDoA, and UWB TDoA algorithms for access-point and client localization, plus RF front-end impairment analysis.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_positioning_cisco/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6E%61%76%69%64.%72%65%79%68%61%6E%69%61%6E@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/navid-reyhanian-9a246456", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=Gk4nFPEAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-dblp',
+        title: 'DBLP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dblp.org/pid/153/1946.html", "_blank");
+        },
+      },{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/files/Resume_Reyhanian_wr.pdf", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
