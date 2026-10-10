@@ -3,7 +3,7 @@ layout: page
 title: Wireless Positioning at Cisco
 description: GNSS, Wi-Fi FTM, AoA/PDoA, and UWB TDoA algorithms for access-point and client localization, plus RF front-end impairment analysis.
 img: assets/img/projects/positioning/card_positioning.png
-importance: 4
+importance: 5
 ---
 
 **Keywords:** GNSS · Kalman filtering · Gauss-Newton · Wi-Fi FTM · AoA/PDoA · phase unwrapping · UWB · TDoA · RF impairments · C/C++ · Python

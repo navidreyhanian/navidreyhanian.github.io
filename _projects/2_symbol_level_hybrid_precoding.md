@@ -1,10 +1,19 @@
 ---
 layout: page
-title: Symbol-Level Mask-Compliant Hybrid Precoding for Multi-User MIMO-OFDM Systems
-description: Hybrid precoding that guarantees spectral-mask and clipping compliance for every transmitted OFDM symbol and tolerates phase-shifter errors. mmWave MU-MIMO-OFDM, 28 GHz.
+title: Symbol-Level Mask-Compliant Precoding for Multi-User MIMO-OFDM Systems
+description: Precoding that guarantees spectral-mask and clipping compliance for every transmitted OFDM symbol, for both hybrid and fully digital MU-MIMO-OFDM transmitters. 28 GHz.
 img: assets/img/projects/symbol_level/card_mask_compliant_beams.png
 importance: 2
 ---
+
+This work has two versions, a hybrid design and a fully digital design. Choose one to view:
+
+<div class="part-toggle mt-3 mb-4" role="tablist" aria-label="Choose a design">
+  <button type="button" class="btn z-depth-0 part-btn active" data-part="hybrid" role="tab">Hybrid precoding</button>
+  <button type="button" class="btn z-depth-0 part-btn" data-part="digital" role="tab">Fully digital precoding</button>
+</div>
+
+<div class="proj-part" data-part="hybrid" markdown="1">
 
 **Paper:** N. Reyhanian, P. Ramezani, and E. Björnson, "Symbol-Level Mask-Compliant Hybrid Precoding for Multi-User MIMO-OFDM Systems," [arXiv:2604.17853](https://arxiv.org/abs/2604.17853v1) ([PDF](https://arxiv.org/pdf/2604.17853v1)).
 
@@ -164,3 +173,140 @@ Implemented in **Python** with an **object-oriented** design, using:
 - **Constraints:** clipping limit $$\chi = 3$$. The default mask is inactive below 10.01&nbsp;MHz, ramps from −70 to −80&nbsp;dBm/100&nbsp;kHz between 10.01 and 12.5&nbsp;MHz, and is flat at −80&nbsp;dBm/100&nbsp;kHz beyond that. It is enforced at 90 frequency samples per side.
 
 _All results and figures are from arXiv:2604.17853v1. The system diagram is adapted from the authors' slides._
+
+</div>
+
+<div class="proj-part" data-part="digital" markdown="1" style="display: none;">
+
+**Paper:** N. Reyhanian, P. Ramezani, and E. Björnson, "Mask-Compliant Clipping-Aware Precoding for Multi-User MIMO-OFDM Systems," accepted at **IEEE GLOBECOM 2026**, Symposium on Signal Processing for Communications. [arXiv:2608.03014](https://arxiv.org/abs/2608.03014v1) ([PDF](https://arxiv.org/pdf/2608.03014v1)).
+
+<div class="row text-center mt-4 mb-1">
+  <div class="col-6 col-md-3 mb-3">
+    <div class="card p-3 h-100">
+      <div style="font-size: 1.7rem; font-weight: 700; color: var(--global-theme-color);">28–37×</div>
+      <div style="font-size: 0.85rem;">lower sum-MSE than ZF/MRT, with or without frequency notching</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-3">
+    <div class="card p-3 h-100">
+      <div style="font-size: 1.7rem; font-weight: 700; color: var(--global-theme-color);">34–60&nbsp;dB</div>
+      <div style="font-size: 0.85rem;">by which ZF/MRT spectra, even with notching, overshoot the emission mask that this design meets</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-3">
+    <div class="card p-3 h-100">
+      <div style="font-size: 1.7rem; font-weight: 700; color: var(--global-theme-color);">Per symbol</div>
+      <div style="font-size: 0.85rem;">emission mask and clipping limit enforced on every transmitted OFDM symbol, as peak-based FCC rules require</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-3">
+    <div class="card p-3 h-100">
+      <div style="font-size: 1.7rem; font-weight: 700; color: var(--global-theme-color);">GLOBECOM 2026</div>
+      <div style="font-size: 0.85rem;">accepted at the Symposium on Signal Processing for Communications</div>
+    </div>
+  </div>
+</div>
+<p style="font-size: 0.8rem; text-align: center; opacity: 0.8;">Gains computed from the plotted data in the paper's figures. Setup: 28&nbsp;GHz, 20&nbsp;MHz, 64 subcarriers, 16-antenna BS, 4 users × 2 antennas, 64-QAM.</p>
+
+### Why it matters for modem and RF system design
+
+- **Built for peak-based regulations.** Some rules limit instantaneous peak emissions, not averages. The FCC UWB rule sets a peak-power ceiling of 0&nbsp;dBm/50&nbsp;MHz, and the CBRS rule (Section 96.41) assesses out-of-band compliance with peak-detected measurements. Nonlinear analog stages after the precoder can also cause spectral regrowth. So the emission mask is imposed on the spectrum of **every transmitted OFDM symbol**.
+- **Guaranteed compliance, not best-effort suppression.** Many existing designs push out-of-band emissions down as far as they can. This design guarantees compliance with whatever spectral limits are required.
+- **Peak control for the PA.** Per-antenna peak-amplitude (clipping) limits keep waveform peaks in check, which reduces PA saturation, nonlinear distortion, and spectral regrowth.
+- **Practical split between transmitter and receivers.** The BS precodes for each realized symbol vector. Each user's combiner is symbol-agnostic and is computed from the symbol distribution.
+
+### System architecture
+
+<div class="row justify-content-sm-center">
+    <div class="col-12 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/projects/symbol_level/digital/architecture.png" title="Fully digital symbol-level MU-MIMO-OFDM architecture" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    <b>Fully digital symbol-level MU-MIMO-OFDM chain.</b> Every BS antenna has its own IFFT + CP, DAC, RF chain, and PA. For each realized symbol tuple, the digital precoder V<sub>k</sub><sup>s</sup>(ω) keeps the power, per-antenna clipping, and emission-mask limits. Each user has one RF chain, ADC, and CP removal + FFT per antenna, followed by a symbol-agnostic digital combiner. The design minimizes the sum-MSE across users and subcarriers.
+</div>
+
+### Approach
+
+The design minimizes the users' **sum mean-squared error** subject to per-subcarrier transmit-power limits, per-antenna peak-amplitude (clipping) limits, and per-antenna out-of-band spectral masks for each realized symbol vector. The joint problem is nonconvex, so it is solved with an **MMSE-driven block coordinate descent (BCD)** that alternates between combiners and precoders:
+
+- **Combiners:** closed-form updates.
+- **Precoder:** a **scalable ADMM**. Auxiliary variables represent the frequency-domain precoded signals, the time-domain waveforms (for the clipping limits), and the sampled spectrum (for the emission mask). This splits one large constrained problem into a sequence of easy subproblems, each solved in closed form or by a one-dimensional bisection search.
+- **Guarantees:** the objective is non-increasing and convergent, and its accumulation points are stationary.
+
+### Results
+
+<div class="row">
+    <div class="col-md-6 mt-3">
+        {% include figure.liquid path="assets/img/projects/symbol_level/digital/psd_vs_zf_mrt.png" title="PSD of the proposed design versus ZF and MRT" class="img-fluid rounded z-depth-1" zoomable=true %}
+        <div class="caption">
+            <b>Where conventional precoders fail the mask.</b> ZF and MRT, with and without Taheri et al.'s frequency notching, leave out-of-band sidelobes 34–60&nbsp;dB above the mask. The proposed spectrum stays under it (N<sub>t</sub>&nbsp;=&nbsp;16, P<sup>s</sup>&nbsp;=&nbsp;30&nbsp;dBm).
+        </div>
+    </div>
+    <div class="col-md-6 mt-3">
+        {% include figure.liquid path="assets/img/projects/symbol_level/digital/mse_vs_zf_mrt.png" title="Sum-MSE of the proposed design versus ZF and MRT" class="img-fluid rounded z-depth-1" zoomable=true %}
+        <div class="caption">
+            <b>Lower emissions and far lower error.</b> From 15 to 35&nbsp;dBm, the sum-MSE is 28–37× lower than every ZF/MRT baseline. Each user's combiner is optimized, while the benchmarks use fixed combiners.
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mt-3">
+        {% include figure.liquid path="assets/img/projects/symbol_level/digital/convergence.png" title="Convergence of the proposed BCD approach" class="img-fluid rounded z-depth-1" zoomable=true %}
+        <div class="caption">
+            <b>Monotone convergence.</b> The sum-MSE decreases with every BCD iteration (30&nbsp;dBm per subcarrier). With 32 antennas it drops by about two orders of magnitude.
+        </div>
+    </div>
+    <div class="col-md-6 mt-3">
+        {% include figure.liquid path="assets/img/projects/symbol_level/digital/mse_vs_power.png" title="Sum-MSE versus transmit power for different antenna counts" class="img-fluid rounded z-depth-1" zoomable=true %}
+        <div class="caption">
+            <b>Scales with antennas.</b> The sum-MSE falls with transmit power and with more BS antennas (8, 16, 32). The gain is steep at low power and flattens at high power, where the spectral-mask constraints become active.
+        </div>
+    </div>
+</div>
+
+### Simulation testbed
+
+These results were produced with the same Python testbed as the hybrid design. The packages and code size are listed under the **Hybrid precoding** tab.
+
+### Simulation parameters
+
+- **Users and arrays:** 4 users with 2 antennas and 2 streams each, sharing all subcarriers. BS with 8, 16, or 32 antennas.
+- **Band:** 28&nbsp;GHz carrier, 20&nbsp;MHz bandwidth, 64 subcarriers.
+- **Symbols:** 64-QAM, with batches of 30 symbol realizations.
+- **Geometry and channel:** users within a 4&nbsp;m radius, 300&nbsp;m from the BS. Frequency-selective Rician channel ($$\kappa$$&nbsp;=&nbsp;10) with 3GPP path loss and shadowing.
+- **Noise:** −174&nbsp;dBm/Hz.
+- **Constraints:** clipping limit $$\chi = 3$$. The mask is inactive below 10.01&nbsp;MHz, ramps from −70 to −80&nbsp;dBm/100&nbsp;kHz between 10.01 and 12.5&nbsp;MHz, and is flat at −80&nbsp;dBm/100&nbsp;kHz beyond that. It is enforced, together with notches over 10.01–18&nbsp;MHz, at 90 frequency samples per side.
+
+_All results and figures are from arXiv:2608.03014v1._
+
+</div>
+
+<style>
+  .part-toggle { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .part-btn { border: 1px solid var(--global-theme-color); color: var(--global-theme-color); background: transparent; border-radius: 999px; padding: 0.4rem 1.2rem; font-size: 0.95rem; }
+  .part-btn.active, .part-btn:hover { background: var(--global-theme-color); color: var(--global-bg-color); }
+</style>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll(".part-btn");
+    var parts = document.querySelectorAll(".proj-part");
+    function show(part) {
+      if (!document.querySelector('.part-btn[data-part="' + part + '"]')) part = "hybrid";
+      parts.forEach(function (p) { p.style.display = p.dataset.part === part ? "" : "none"; });
+      buttons.forEach(function (b) {
+        b.classList.toggle("active", b.dataset.part === part);
+        b.setAttribute("aria-selected", b.dataset.part === part ? "true" : "false");
+      });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        show(b.dataset.part);
+        history.replaceState(null, "", "#" + b.dataset.part);
+      });
+    });
+    show((location.hash || "#hybrid").slice(1));
+  })();
+</script>

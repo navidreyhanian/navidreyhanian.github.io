@@ -3,7 +3,7 @@ layout: page
 title: Precoding for Uplink RIS-Assisted Cell-Free MIMO-OFDM Systems with IQ Imbalance
 description: Joint UE precoding, multi-RIS configuration, and BS combining that account for transmit and receive IQ imbalance and the image-subcarrier leakage it causes in OFDM. 28 GHz.
 img: assets/img/projects/ris_iqi/card_ris_uplink.png
-importance: 3
+importance: 4
 ---
 
 **Paper:** N. Reyhanian, R. Ghaderi Zefreh, P. Ramezani, and E. Björnson, "Precoding for Uplink RIS-Assisted Cell-Free MIMO-OFDM Systems with IQ Imbalance," journal manuscript.
