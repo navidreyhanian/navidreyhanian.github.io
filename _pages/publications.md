@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Journal articles, conference papers, preprints, and patents, newest first.
+description: Preprints, journal articles, conference papers, and patents, newest first.
 nav: true
 nav_order: 2
 ---
@@ -13,9 +13,9 @@ Also on [Google Scholar](https://scholar.google.com/citations?user=Gk4nFPEAAAAJ&
 
 <div class="pub-filter mt-3 mb-2" role="group" aria-label="Filter publications by type">
   <button type="button" class="btn btn-sm z-depth-0 pub-filter-btn active" data-filter="all">All</button>
+  <button type="button" class="btn btn-sm z-depth-0 pub-filter-btn" data-filter="preprints">Preprints</button>
   <button type="button" class="btn btn-sm z-depth-0 pub-filter-btn" data-filter="journals">Journals</button>
   <button type="button" class="btn btn-sm z-depth-0 pub-filter-btn" data-filter="conferences">Conferences</button>
-  <button type="button" class="btn btn-sm z-depth-0 pub-filter-btn" data-filter="preprints">Preprints</button>
   <button type="button" class="btn btn-sm z-depth-0 pub-filter-btn" data-filter="patents">Patents</button>
 </div>
 
@@ -25,6 +25,11 @@ Also on [Google Scholar](https://scholar.google.com/citations?user=Gk4nFPEAAAAJ&
 
 <div class="publications">
 
+<div class="pub-section" data-section="preprints">
+<h2 class="bibliography">preprints</h2>
+{% bibliography --query @unpublished --group_by none %}
+</div>
+
 <div class="pub-section" data-section="journals">
 <h2 class="bibliography">journal articles</h2>
 {% bibliography --query @article --group_by none %}
@@ -33,11 +38,6 @@ Also on [Google Scholar](https://scholar.google.com/citations?user=Gk4nFPEAAAAJ&
 <div class="pub-section" data-section="conferences">
 <h2 class="bibliography">conference papers</h2>
 {% bibliography --query @inproceedings --group_by none %}
-</div>
-
-<div class="pub-section" data-section="preprints">
-<h2 class="bibliography">preprints</h2>
-{% bibliography --query @unpublished --group_by none %}
 </div>
 
 <div class="pub-section" data-section="patents">
